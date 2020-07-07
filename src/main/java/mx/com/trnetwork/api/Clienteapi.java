@@ -50,6 +50,15 @@ public class Clienteapi{
 		return clienRepo.save(cliente);
 	}
 	
+	@DeleteMapping("/borra/{id}")
+	public void deleteId(@PathVariable long id) {
+	 clienRepo.deleteById(id);
+	}
 	
+	@DeleteMapping("/borratodos")
+	public void deleteAll() {
+	clienRepo.deleteAll();
+	
+	}
 
 }
