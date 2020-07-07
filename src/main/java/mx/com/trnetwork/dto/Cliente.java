@@ -19,8 +19,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Cliente {
 	
 	@Id
-//	@GeneratedValue(strategy = GenerationType.AUTO)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cliente_sequence")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cliente_sequence")
 	//@GeneratedValue(strategy = GenerationType.TABLE, generator = "sequences")
 	private Long id_cli;
 		
