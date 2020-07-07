@@ -6,4 +6,6 @@ import mx.com.trnetwork.dto.Cliente;
 
 public interface ClienteRepository extends CrudRepository<Cliente, Long>{
 
+	
+
 }

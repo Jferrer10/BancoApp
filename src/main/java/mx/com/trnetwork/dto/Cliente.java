@@ -22,7 +22,7 @@ public class Cliente {
 //	@GeneratedValue(strategy = GenerationType.AUTO)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cliente_sequence")
 	//@GeneratedValue(strategy = GenerationType.TABLE, generator = "sequences")
-	private Long id;
+	private Long id_cli;
 		
 	@Column(name="nombre")
 	private String nombre;
@@ -46,13 +46,39 @@ public class Cliente {
 	public Cliente() {
 	}
 
-	public Long getId() {
-		return id;
+	
+	
+	public Cliente(Long id_cli, String nombre, String apellidoP, String apellidoM, String sucursal, boolean buro,
+			List<Creditos> creditos) {
+		super();
+		this.id_cli = id_cli;
+		this.nombre = nombre;
+		this.apellidoP = apellidoP;
+		this.apellidoM = apellidoM;
+		this.sucursal = sucursal;
+		this.buro = buro;
+		this.creditos = creditos;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+
+
+	/**
+	 * @return the id_cli
+	 */
+	public Long getId_cli() {
+		return id_cli;
 	}
+
+
+
+	/**
+	 * @param id_cli the id_cli to set
+	 */
+	public void setId_cli(Long id_cli) {
+		this.id_cli = id_cli;
+	}
+
+
 
 	public String getNombre() {
 		return nombre;
@@ -102,11 +128,14 @@ public class Cliente {
 		this.creditos = creditos;
 	}
 
+
+
 	@Override
 	public String toString() {
-		return "Cliente [id=" + id + ", nombre=" + nombre + ", apellidoP=" + apellidoP + ", apellidoM=" + apellidoM
-				+ ", sucursal=" + sucursal + ", buro=" + buro + ", creditos=" + creditos + "]";
+		return "Cliente [id_cli=" + id_cli + ", nombre=" + nombre + ", apellidoP=" + apellidoP + ", apellidoM="
+				+ apellidoM + ", sucursal=" + sucursal + ", buro=" + buro + ", creditos=" + creditos + "]";
 	}
+
 	
 	
 }
